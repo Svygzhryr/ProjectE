@@ -40,7 +40,7 @@ export interface License2 {
   url: string;
 }
 
-export interface WordNotFoundData {
+export interface WordNotFoundResponse {
   title: string;
   message: string;
   resolution: string;
