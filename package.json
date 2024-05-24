@@ -2,7 +2,6 @@
   "name": "project_e",
   "version": "0.0.1",
   "description": "Web vocabulary and probably some more stuff",
-  "main": "main.js",
   "repository": "https://github.com/Svygzhryr/ProjectE",
   "author": "Svygzhryr <pamixy@gmail.com>",
   "license": "MIT",
@@ -28,6 +27,7 @@
   },
   "devDependencies": {
     "@types/react": "^18.3.2",
-    "@types/react-dom": "^18.3.0"
+    "@types/react-dom": "^18.3.0",
+    "css-loader": "^7.1.2"
   }
 }
