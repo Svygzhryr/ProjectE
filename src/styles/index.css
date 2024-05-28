@@ -1,3 +1,27 @@
-body {
-  background-color: #282230;
+:root {
+  --d1: #282230;
+  --d2: #362d42;
+  --d3: #55456b;
+  --m1: #634788;
+  --m2: #8c4cdf;
+  --l1: #d5cae4;
+  --l2: #b3a9c2;
+}
+
+body,
+body * {
+  color: var(--l1);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: var(--d1);
+}
+
+input {
+  background-color: var(--d2);
+  border: none;
+  color: var(--l1);
+}
+
+button {
+  background-color: var(--d2);
+  border: none;
 }

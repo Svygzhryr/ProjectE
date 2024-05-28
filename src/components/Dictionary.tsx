@@ -2,6 +2,7 @@ import React, { ChangeEventHandler, useEffect, useState } from "react";
 import { Words, WordNotFoundResponse } from "../types";
 import { Loader } from "./Loader";
 import styles from "../styles/dictionary.module.css";
+import { generatePlaceholder } from "../utils";
 
 export const Dictionary = () => {
   const [data, setData] = useState<Words | WordNotFoundResponse | null>(null);
@@ -34,22 +35,32 @@ export const Dictionary = () => {
 
   return (
     <div className={styles.wrapper}>
-      <input placeholder={"Nightingale"} onChange={handleInputChange} />
+      <input
+        className={styles.input}
+        placeholder={generatePlaceholder()}
+        onChange={handleInputChange}
+      />
       {!isLoading ? (
         (!data && <h3>Type in any word!</h3>) ||
         (data &&
           (Array.isArray(data) ? (
             data.map((foundWord) => {
               return (
-                <div>
-                  <h3>{foundWord.word}</h3>
-                  <h3>({foundWord.phonetic})</h3>
+                <div className={styles.wordWrapper}>
+                  <h3 className={styles.word}>{foundWord.word}</h3>
+                  <h3 className={styles.phonetic}>({foundWord.phonetic})</h3>
                   {foundWord.meanings.map((meaning) => {
                     return (
-                      <ul>
-                        <h3>{meaning.partOfSpeech}</h3>
+                      <ul className={styles.meaningsWrapper}>
+                        <h3 className={styles.partOfSpeech}>
+                          {meaning.partOfSpeech}
+                        </h3>
                         {meaning.definitions.map((definitions) => {
-                          return <li>{definitions.definition}</li>;
+                          return (
+                            <li className={styles.definition}>
+                              {definitions.definition}
+                            </li>
+                          );
                         })}
                       </ul>
                     );
