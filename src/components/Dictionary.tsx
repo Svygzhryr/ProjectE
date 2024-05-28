@@ -1,6 +1,7 @@
 import React, { ChangeEventHandler, useEffect, useState } from "react";
-import { WordNotFoundResponse, Words } from "../types";
+import { Words, WordNotFoundResponse } from "../types";
 import { Loader } from "./Loader";
+import styles from "../styles/dictionary.module.css";
 
 export const Dictionary = () => {
   const [data, setData] = useState<Words | WordNotFoundResponse | null>(null);
@@ -32,7 +33,7 @@ export const Dictionary = () => {
   }, [inputValue, 500]);
 
   return (
-    <div>
+    <div className={styles.wrapper}>
       <input placeholder={"Nightingale"} onChange={handleInputChange} />
       {!isLoading ? (
         (!data && <h3>Type in any word!</h3>) ||
