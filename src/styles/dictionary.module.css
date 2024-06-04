@@ -1,0 +1,84 @@
+.wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 30px;
+  text-align: center;
+}
+
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input {
+  font-size: 24px;
+  padding: 5px 10px;
+
+  outline: 2px solid transparent;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.input::placeholder {
+  color: var(--d3);
+}
+
+.input:focus {
+  outline: 4px solid var(--m1);
+}
+
+.wordWrapper {
+  margin-top: 20px;
+}
+
+.word {
+  font-size: 24px;
+}
+
+.word::before {
+  content: "";
+  display: block;
+  width: 100px;
+  margin: 0 auto 10px;
+  border-top: 4px solid var(--m1);
+  border-radius: 50px 50px 0 0;
+}
+
+.phonetic::after {
+  content: "";
+  display: block;
+  width: 100px;
+  margin: 10px auto 0;
+  border-bottom: 4px solid var(--m1);
+  border-radius: 0 0 50px 50px;
+}
+
+.meaningsWrapper {
+  margin-top: 20px;
+}
+
+.partOfSpeech {
+  margin: 20px;
+  font-size: 24px;
+}
+
+.meaning {
+}
+
+.definition {
+  margin-top: 10px;
+  text-align: left;
+  list-style-type: disc;
+}
+
+.definition::marker {
+  color: var(--m2);
+}
+
+.noDefinition {
+  margin-top: 40px;
+
+  color: var(--d2);
+  font-size: 32px;
+}

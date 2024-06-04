@@ -1,5 +1,5 @@
-import React from "react";
+import styles from "../styles/loader.module.css";
 
 export const Loader = () => {
-  return <h3>Loading...</h3>;
+  return <span className={styles.loader}></span>;
 };
