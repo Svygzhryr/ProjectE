@@ -1,4 +1,4 @@
-import React, { ChangeEventHandler, useEffect, useState } from "react";
+import { ChangeEventHandler, useEffect, useState } from "react";
 import { Words, WordNotFoundResponse } from "../types";
 import { Loader } from "./Loader";
 import styles from "../styles/dictionary.module.css";
@@ -32,7 +32,7 @@ export const Dictionary = () => {
       setIsLoading(false);
     }, 500);
     return () => clearTimeout(delayInputTimeoutId);
-  }, [inputValue, 500]);
+  }, [inputValue]);
 
   useEffect(() => {
     console.log(data);
